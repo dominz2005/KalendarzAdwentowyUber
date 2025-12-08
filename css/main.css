@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'UberMove';
+  src: url('/fonts/UberMove-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UberMove';
+  src: url('/fonts/UberMove-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UberMove';
+  src: url('/fonts/UberMove-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UberMove';
+  src: url('/fonts/UberMove-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UberMoveText';
+  src: url('/fonts/UberMoveText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UberMoveText';
+  src: url('/fonts/UberMoveText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UberMoveText';
+  src: url('/fonts/UberMoveText-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UberMoveText';
+  src: url('/fonts/UberMoveText-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+    font-family: 'UberMoveText', sans-serif;
+}
+
+body {
+  background-image: url("/img/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 250px 250px 250px 250px 100px;
+  gap: 15px;
+  max-width: 1500px;
+  margin-inline: auto;
+  /* cursor: url("/img/uberblack.webp"), auto; */
+}
+#cards .card {
+  width: auto;
+  min-height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#cards .card .cardContent {
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  background-color: #ffffff62;
+}
+#cards .card .cardContent h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 70px;
+  line-height: 70px;
+}
+#cards .card .cardContent h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 25px;
+}
+#cards .card .cardContent p {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.item-18 { grid-area: 1 / 1 / 2 / 2; }
+.item-21 { grid-area: 1 / 2 / 3 / 3; }
+.item-22 { grid-area: 1 / 3 / 2 / 4; }
+.item-20 { grid-area: 1 / 4 / 2 / 5; }
+.item-16 { grid-area: 2 / 1 / 4 / 2; }
+.item-17 { grid-area: 3 / 2 / 4 / 3; }
+.item-15 { grid-area: 2 / 3 / 4 / 5; }
+.item-24 { grid-area: 4 / 1 / 6 / 3; }
+.item-19 { grid-area: 4 / 3 / 6 / 4; }
+.item-23 { grid-area: 4 / 4 / 6 / 5; }
+
+@media screen and (width < 1320px) {
+  #cards .card .cardContent h3 {
+    font-size: 50px;
+  }
+  #cards .card .cardContent h4 {
+    font-size: 20px;
+  }
+  #cards .card .cardContent p {
+    font-size: 16px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (width < 1010px) {
+  #cards .card .cardContent {
+    padding: 10px;
+  }
+  #cards .card .cardContent h3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (width < 800px) {
+  #cards .card .cardContent {
+    padding: 0;
+  }
+}
+
+@media screen and (width < 650px) {
+  #cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #cards .card {
+    flex: 1;
+    padding: 15px;
+    min-width: 150px;
+  }
+  #cards .card.item-24 {
+    flex: 1;
+    padding: 15px;
+    min-width: 350px;
+  }
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  transition: .2s;
+}
