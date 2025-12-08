@@ -2,18 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Kalendarz adwentowy</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/main.css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body>
+        <canvas id="snow"></canvas>
         <div class="h-screen">
             <header class="bg-black py-4">
                 <img src="img/logo.png" alt="Uber logo" class="mx-auto">
             </header>
             <div class="px-10 lg:px-36 flex flex-col justify-center h-full">
-                <h1 class="font-bold text-5xl lg:text-7xl lg:w-2xl">Otwórz, zdrap, odkryj. Twój przewodnik po świątecznym kalendarzu Uber.</h1>
+                <h1 class="text-5xl lg:text-7xl lg:w-2xl">Otwórz, zdrap, odkryj. Twój przewodnik po świątecznym kalendarzu Uber.</h1>
                 <a class="py-24 cursor-pointer inline-block" href="#cards">
                     <img src="img/arrow.png" alt="arrow down">
                 </a>
@@ -21,100 +22,147 @@
         </div>
         <div class="h-screen">
             <div class="px-10 lg:px-36 flex flex-col justify-center h-full">
-                <p class="text-3xl lg:w-xl">W te Święta życzymy Ci lekkości, dobrej energii i jazdy przez koniec roku na zielonej fali. Otwórz nasz kalendarz, złap trochę magii i pozwól, by grudzień dowiózł Ci same dobre momenty.</p>
+                <p class="text-3xl lg:w-xl">Do Świąt zostało tylko 10 dni - idealny czas, by wrzucić luz i przygotować się do Pierwszej Gwiazdki. Życzymy Ci miękkiego lądowania na końcu roku i wielu miłych zaskoczeń po drodze.</p>
             </div>
         </div>
         <div class="h-screen">
             <div class="px-10 lg:px-36 flex flex-col justify-center h-full">
-                <p class="text-3xl lg:w-xl">Przed Tobą nasz interaktywny kalendarz świąteczny od Uber - 10 okienek, 10 prezentów i zero zbędnych zakrętów. Wybierz okienko, użyj małego czarnego auta jako „zdrapki” i odsłoń swój kod: na przejazdy, zniżki, bonusy czy roczną subskrypcję Uber One. Każde okienko działa tylko raz, ale możesz wracać, aż odkryjesz wszystkie. </p>
+                <p class="text-3xl lg:w-xl">Wskakuj do naszego kalendarza, zdrap okienko z bieżącą czarnym autem i zobacz, co dziś dla Ciebie przygotowaliśmy. Każdy dzień to nowa niespodzianka — odkrywaj je po kolei.</p>
             </div>
         </div>
         <div class="h-screen">
             <div class="px-10 lg:px-36 flex flex-col justify-center h-full">
-                <h1 class="font-bold text-5xl lg:text-7xl lg:w-2xl">Gotowy? Wejdź, zdrap, korzystaj -<br>i daj się dowieźć świątecznemu klimatowi.</h1>
+                <h1 class="font-bold text-5xl lg:text-7xl lg:w-2xl">Startujemy. Niech świąteczna magia sama Cię dowiezie.</h1>
             </div>
         </div>
         <div class="p-4 flex gap-4" id="cards">
             <div class="card relative item-18">
-                <div class="cardContent absolute size-full" code="UBER100C" qr="false">
-                    <h3>25%</h3>
-                    <p>Jedź wygodnie, jak Mikołaj na saniach! Skorzystaj z 100% rabatu do 40 zł na Uber Comfort - oferta ważna od 18 do 21 grudnia.</p>
-                </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="18" data-month="GRUDNIA"></canvas>
-            </div>
-            <div class="card relative item-21">
-                <div class="cardContent absolute size-full" code="UBER25FOREATS" qr="false">
-                    <h3>25 pln</h3>
-                    <p>Coś na ząb? Zamów świąteczne przekąski i wykorzystaj voucher o wartości 25 PLN na Uber Eats!</p>
-                </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="21" data-month="GRUDNIA"></canvas>
-            </div>
-            <div class="card relative item-22">
-                <div class="cardContent absolute size-full" code="UBERFOROTHERS" qr="false">
-                    <h4>Tym razem zamiast kodu przekazujemy tę kwotę na pomoc zwierzętom.</h4>
-                </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="22" data-month="GRUDNIA"></canvas>
-            </div>
-            <div class="card relative item-20">
-                <div class="cardContent absolute size-full" code="KOD QR" qr="true">
-                    <h3>QR kod</h3>
-                    <p>Stworzyliśmy dla Ciebie naszą Świąteczno-Uberową playlistę! Zeskanuj QR kod i włącz świąteczny klimat w drodze.</p>
-                </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="20" data-month="GRUDNIA"></canvas>
-            </div>
-            <div class="card relative item-16">
-                <div class="cardContent absolute size-full" code="UBER100COMFORT" qr="false">
-                    <h3>25%</h3>
-                    <p>Jedź taniej i skorzystaj z 100% rabatu do 40 zł na Uber Comfort, ważnego od 16 do 18 grudnia.</p>
-                </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="16" data-month="GRUDNIA"></canvas>
-            </div>
-            <div class="card relative item-17">
-                <div class="cardContent absolute size-full" code="Uber15RIDE" qr="false">
-                    <h3>15 pln</h3>
-                    <p>Jedź zobaczyć lampki świąteczne! Zgarnij 15 PLN rabatu na przejazd między 17:00 a 22:00 - oferta obowiązuje od 17 do 20 grudnia.</p>
-                </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="17" data-month="GRUDNIA"></canvas>
-            </div>
-            <div class="card relative item-15">
-                <div class="cardContent absolute size-full" code="UBER15X" qr="false">
-                    <h3>15 pln</h3>
-                    <p>Ruszajmy! Odbierz swój rabat na 15 zł na przejazdy UberX. Kod działa tylko od 15 do 17 grudnia - wykorzystaj go, zanim wygaśnie!</p>
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>15 PLN</h3>
+                        <h4>UBER15X</h4>
+                        <p>Jedź wygodnie, jak Mikołaj na saniach! Skorzystaj z 100% rabatu do 40 zł na Uber Comfort - oferta ważna od 18 do 21 grudnia.</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
                 </div>
                 <canvas class="scratch absolute top-0 left-0 size-full" data-day="15" data-month="GRUDNIA"></canvas>
             </div>
-            <div class="card relative item-24">
-                <div class="cardContent absolute size-full" code="UBERONEFORYEAR" qr="false">
-                    <h3>10 pln + Uber One for year</h3>
-                    <p>Twój specjalny prezent! Odbierz 10 PLN oraz cały rok Uber One za darmo!</p>
+            <div class="card relative item-21">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>25%</h3>
+                        <h4>UBER100COMFORT</h4>
+                        <p>Jedź taniej i skorzystaj z 100% rabatu do 40 zł na Uber Comfort, ważnego od 16 do 18 grudnia.</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
                 </div>
-                <canvas class="scratch absolute top-0 left-0 size-full" data-day="24" data-month="GRUDNIA"></canvas>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="16" data-month="GRUDNIA"></canvas>
             </div>
-            <div class="card relative item-19">
-                <div class="cardContent absolute size-full" code="UBER30PLN" qr="false">
-                    <h3>30 pln</h3>
-                    <p>Wyślij prezenty, zanim będzie za późno! Odbierz voucher na 30 PLN na Uber Delivery, ważny od 19 do 20 grudnia.</p>
+            <div class="card relative item-22">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>15 PLN</h3>
+                        <h4>Uber15RIDE</h4>
+                        <p>Jedź zobaczyć świąteczne iluminacje! Zgarnij 15 PLN rabatu na przejazd między 17:00 a 22:00 - oferta obowiązuje od 17 do 20 grudnia.</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
+                </div>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="17" data-month="GRUDNIA"></canvas>
+            </div>
+            <div class="card relative item-20">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>25%</h3>
+                        <h4>UBER100C</h4>
+                        <p>Jedź wygodnie, jak Mikołaj na saniach! Skorzystaj z 100% rabatu do 40 zł na Uber Comfort - oferta ważna od 18 do 21 grudnia.</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
+                </div>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="18" data-month="GRUDNIA"></canvas>
+            </div>
+            <div class="card relative item-16">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>30 PLN</h3>
+                        <h4>UBER100COMFORT</h4>
+                        <p>Wyślij prezenty, zanim będzie za późno! Odbierz voucher na 30 PLN na Uber Dostawa, ważny od 19 do 20 grudnia.</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
                 </div>
                 <canvas class="scratch absolute top-0 left-0 size-full" data-day="19" data-month="GRUDNIA"></canvas>
             </div>
-            <div class="card relative item-23">
-                <div class="cardContent absolute size-full" code="UBER200" qr="false">
-                    <h3>200 pln</h3>
-                    <p>200 PLN WOW! Wykorzystaj wszystko w aplikacji!</p>
+            <div class="card relative item-17">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <img src="img/qr.png" alt="qr code" class="size-36 mx-auto">
+                        <p>Stworzyliśmy dla Ciebie naszą Świąteczno-Uberową playlistę! Zeskanuj QR kod i włącz świąteczny klimat w drodze.</p>
+                    </div>
+                </div>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="20" data-month="GRUDNIA"></canvas>
+            </div>
+            <div class="card relative item-15">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>25 PLN</h3>
+                        <h4>UBER25FORALL</h4>
+                        <p>Wskocz w świąteczny klimat! Odbierz 25 PLN na dowolny przejazd Uber i wykorzystaj go, zanim zniknie jak pierwsza gwiazdka!</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
+                </div>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="21" data-month="GRUDNIA"></canvas>
+            </div>
+            <div class="card relative item-24">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <img src="img/paws.png" alt="paws" class="size-36 mx-auto">
+                        <p>Tym razem zamiast kodu przekazujemy tę kwotę na pomoc zwierzętom. Razem robimy coś dobrego - dziękujemy, że jesteś z nami!</p>
+                    </div>
+                </div>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="22" data-month="GRUDNIA"></canvas>
+            </div>
+            <div class="card relative item-19">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>200 PLN</h3>
+                        <h4>UBER200</h4>
+                        <p>200 PLN WOW! Wykorzystaj wszystko w aplikacji!</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
                 </div>
                 <canvas class="scratch absolute top-0 left-0 size-full" data-day="23" data-month="GRUDNIA"></canvas>
+            </div>
+            <div class="card relative item-23">
+                <div class="cardContent absolute size-full">
+                    <div class="inside">
+                        <h3>10 pln + Uber One for year</h3>
+                        <h4>UBERONEFORYEAR</h4>
+                        <p>Twój specjalny prezent! Odbierz 10 PLN oraz cały rok Uber One za darmo!</p>
+                    </div>
+                    <div class="bottom">
+                        <p>Promocja dotyczy wyłącznie odbiorców tej wiadomości. Promocja obowiązuje na 1 przejazd z użyciem produktu UberX dostępnego w sekcji Przejazd w aplikacji Uber. Promocja obowiązuje na przejazdy na terenie Polski do 2025-12-31. Promocja uprawnia do otrzymania 25 zł zniżki na przejazd od daty wpisania kodu w aplikacji Uber. Maksymalna wartość promocji na przejazd wynosi 15zł.</p>
+                    </div>
+                </div>
+                <canvas class="scratch absolute top-0 left-0 size-full" data-day="24" data-month="GRUDNIA"></canvas>
             </div>
         </div>
         <footer class="bg-black py-16">
             <p class="text-white text-center font-medium">Kontakt</p>
         </footer>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <p>Twój kod to: 🎉</p>
-                <img src="img/qr.png" alt="kod qr" class="size-64 hidden">
-                <button class="bg-red-400 text-white rounded px-10 py-2 mt-10 w-full cursor-pointer hover:opacity-75 transition">ZAMKNIJ</button>
-            </div>
-        </div>
     </body>
     <script src="js/cards.js"></script>
+    <script src="js/snow.js"></script>
 </html>

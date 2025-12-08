@@ -1,6 +1,3 @@
-const popup = document.querySelector("#popup");
-const popupClose = popup.querySelector("button");
-
 const canvas = document.querySelectorAll('.scratch');
 
 canvas.forEach(el => {
@@ -137,20 +134,3 @@ canvas.forEach(el => {
     el.addEventListener("touchmove", draw);
     window.addEventListener("touchend", finishScratch);
 });
-
-const qr = popup.querySelector("img");
-function showPopup(code, isQR = false) {
-    popup.classList.add("show");
-    
-    if (isQR) {
-        qr.classList.remove("hidden");
-    }
-
-    const text = popup.querySelector("p");
-    text.innerHTML = `Twój kod to: <b>${code}</b> 🎉`;
-}
-function hidePopup() {
-    popup.classList.remove("show");
-    qr.classList.add("hidden");
-}
-popupClose.addEventListener("click", hidePopup);
