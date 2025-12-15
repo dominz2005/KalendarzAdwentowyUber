@@ -6,12 +6,12 @@ const date = new Date();
 
 if (date.getDate() >= 25) hideEverything();
 
-window.addEventListener("keypress", event => {
-    if(!event.ctrlKey) return;
-    if(!event.code == "KeyO") return;
+// window.addEventListener("keypress", event => {
+//     if(!event.ctrlKey) return;
+//     if(!event.code == "KeyO") return;
 
-    hideEverything();
-});
+//     hideEverything();
+// });
 
 function hideEverything() {
     normalScreen.remove();
