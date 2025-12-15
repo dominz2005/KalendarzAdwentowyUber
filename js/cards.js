@@ -5,8 +5,8 @@ canvas.forEach(el => {
 
     const monthDay = el.dataset.day;
     const date = new Date();
-    const today = date.getDate();
-    // const today = 100;
+    // const today = date.getDate();
+    const today = 100;
 
     const cardContent = el.parentNode.querySelector(".cardContent");
     if(monthDay > today) {
